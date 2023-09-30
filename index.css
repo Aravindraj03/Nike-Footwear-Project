@@ -1,0 +1,410 @@
+/*----------------Reset Some Default Styles---------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  margin-top: 66px;
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  animation: slide-show 12s infinite;
+}
+.slide-2{animation-delay: 4s;}
+.slide-3{animation-delay: 8s;}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*----------------Navbar Style--------------*/
+.navbar {
+  background-color: #fff;
+  border-bottom: 2px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.navbar img {
+  width: 100px;
+  height: 40px;
+}
+.navbar .submenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  font-size: 20px;
+  transition: all 0.5s;
+}
+.navbar .submenu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.navbar .submenu a:hover {
+  border-color: white;
+  background-color: black;
+  color: white;
+}
+.navbar form .search[type="search"] {
+  width: 100%;
+  padding: 8px 20px 8px 55px;
+  border: 1px solid gray;
+  font-size: 18px;
+  border-radius: 25px;
+  background-position: 2% 50%;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-image: url("file:///C:/Users/91638/Downloads/icons8-search.svg");
+}
+/*---Navbar Icon---*/
+.navbar .fa-bars {
+  color: black;
+  display: none;
+  cursor: pointer;
+}
+.checkbox {
+  display: none;
+}
+/*---Sign Up And Login stlye---*/
+.navbar .submenu button {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid gray;
+  font-size: 17px;
+  flex-wrap: nowrap;
+}
+.navbar .submenu button:hover {
+  background-color: black;
+  color: white;
+}
+
+/*-------------------Full Cover_Iamge of Body-------------------*/
+@keyframes slide-show{
+  0%{opacity: 0;}
+  10%{opacity: 1;}
+  20%,30%{opacity: 1;}
+  50%{opacity: 0;}
+}
+
+/*---------------------Shop footwear Styles-------------------------*/
+.shop-footwear {
+  padding: 0px 0px;
+}
+.shop-footwear h2 {
+  padding: 25px 20px 10px;
+  display: block;
+  z-index: 5;
+}
+.boys-shoes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  padding: 0px 20px;
+}
+.boys-shoes .boys {
+  width: 100%;
+  min-height: 300px;
+  box-shadow: 1px 1px 6px lightgray;
+  transition: all 0.6s;
+}
+.boys-shoes .boys:hover {
+  transform: scale(1, 1.1);
+  cursor: pointer;
+}
+.boys img {
+  width: 100%;
+  height: 250px;
+}
+.boys-shoes .boys .shoes-details {
+  padding: 20px;
+}
+.boys-shoes .boys .shoes-details p {
+  padding: 7px 0px;
+}
+.boys-shoes .boys .shoes-details p span {
+  padding-left: 12px;
+}
+.boys-shoes .boys .offer {
+  color: green;
+}
+.boys-shoes .boys button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  font-size: 17px;
+  display: block;
+  cursor: pointer;
+}
+/*-----shoes-rating-----*/
+.full_review {
+  padding: 20px 20px;
+}
+.shoes-rating {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  padding: 10px 0px;
+}
+.shoes-rating .rating-content {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+}
+.shoes-rating .rating-content .image {
+  text-align: center;
+}
+.shoes-rating .rating-content .image img {
+  width: 80px;
+  height: 80px;
+}
+.shoes-rating .rating-content .image h3 {
+  padding: 5px;
+  color: gray;
+}
+.shoes-rating .rating-content .image p {
+  padding: 10px;
+}
+/*-----shoes-rating content-----*/
+.shoes-rating .content {
+  padding: 15px 0px;
+}
+.shoes-rating .content p {
+  padding: 10px 0px;
+  font-size: 20px;
+}
+.shoes-rating .content p i {
+  color: orange;
+}
+.shoes-rating .content p:last-child {
+  line-height: 30px;
+}
+/*----------------------About Page--------------------*/
+.about_page {
+  display: flex;
+  gap: 80px;
+  padding: 0px 20px;
+}
+.about_page .content p {
+  padding: 10px 0px;
+  line-height: 22px;
+}
+.about_page .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_page .image img {
+  width: 300px;
+  height: 300px;
+}
+
+/*------------------Contact Form-----------------*/
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
+}
+.contact-form .contact-detail {
+  padding: 20px;
+  border: 1px solid darkgray;
+  width: 60%;
+  border-radius: 10px;
+}
+.contact-form .contact-detail .fname {
+  width: 49%;
+}
+.contact-form .contact-detail .lname {
+  width: 49%;
+  margin-left: 10px;
+}
+.contact-form .contact-detail input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.contact-form .contact-detail .address {
+  padding-bottom: 100px;
+}
+.contact-form .contact-detail button {
+  padding: 11px;
+  background-color: orange;
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+/*--------------Footer Page-------------*/
+footer {
+  margin: 30px 10px 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+footer .box-1,
+.box-2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 120px 20px 20px;
+}
+footer .box-1 p,
+.box-2 p {
+  line-height: 30px;
+}
+footer .box-1 {
+  background-color: rgba(95, 94, 94, 0.671);
+}
+footer .box-2 {
+  padding-right: 60px;
+  background-color: black;
+  color: #fff;
+}
+footer .box-2 .content-4 i {
+  font-size: 30px;
+  padding: 10px;
+}
+
+/*----------Meadia Queries For Responsive Design---------*/
+@media screen and (max-width: 800px) {
+  /*-------------Mobile View For Responsive Navbar Style-----------*/
+  .navbar {
+    padding: 13px 25px;
+    z-index: 2;
+  }
+  .navbar .submenu {
+    position: fixed;
+    background-color: black;
+    flex-direction: column;
+    justify-content: start;
+    padding: 10px;
+    gap: 10px;
+    top: 60px;
+    width: 100%;
+    min-height: 90vh;
+    left: -100%;
+    font-size: 25px;
+  }
+  .navbar .fa-bars {
+    display: block;
+    font-size: 25px;
+  }
+  input:checked ~ .submenu {
+    background-color: darkgrey;
+    left: 0;
+  }
+  .navbar form .search[type="search"] {
+    width: 160px;
+    display: block;
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+    filter: brightness(170%);
+  }
+  .navbar form .search[type="search"]:focus {
+    width: 350px;
+    background-color: #fff;
+    filter: brightness(100%);
+  }
+  .navbar .submenu button {
+    font-size: 23px;
+    margin: 5px;
+    background-color: darkgray;
+    border: none;
+  }
+  /*---------------shoes rating--------------------*/
+  .shoes-rating {
+    grid-template-columns: auto;
+  }
+  .shoes-rating .rating-content {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:300px) and (max-width:500px) {
+  /*-----shoes image-----*/
+  .boys-shoes {
+    grid-template-columns: auto;
+  }
+  .about_page{
+    flex-direction: column;
+  }
+  .rating-content{
+    flex-direction: column;
+  }
+  .box-1,.box-2{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form .contact-detail .fname,.contact-form .contact-detail .lname{
+    width: 100%;
+  }
+  .contact-form .contact-detail .lname{
+    margin-left: 0px;
+  }
+  .contact-form .contact-detail{
+    width: 90%;
+  }
+}
+@media screen and (min-width:500px) and (max-width:800px) {
+  /*-----shoes image-----*/
+  .boys-shoes {
+    grid-template-columns: auto auto;
+  }
+  .about_page{
+    flex-direction: column;
+  }
+  .contact-form .contact-detail .fname,.contact-form .contact-detail .lname{
+    width: 100%;
+  }
+  .contact-form .contact-detail .lname{
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+  .navbar .submenu {
+    gap: 5px;
+  }
+  .navbar form .search[type="search"] {
+    display: none;
+  }
+  /*-----shoes image-----*/
+  .boys-shoes {
+    grid-template-columns: auto auto auto;
+  }
+}
